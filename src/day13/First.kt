@@ -5,6 +5,7 @@ import java.io.File
 class First {
 
     fun extractXYForButton(input: String): Pair<Long, Long> {
+        // Button A: X+94, Y+34
         val regex = """Button \w+: X([+-]?\d+), Y([+-]?\d+)""".toRegex()
         val matchResult = regex.matchEntire(input)!!
 
@@ -14,6 +15,7 @@ class First {
     }
 
     fun extractXYForTotal(input: String): Pair<Long, Long> {
+        // Prize: X=8400, Y=5400
         val regex = """Prize: X=([+-]?\d+), Y=([+-]?\d+)""".toRegex()
         val matchResult = regex.matchEntire(input)!!
 
